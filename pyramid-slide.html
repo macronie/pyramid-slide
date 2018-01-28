@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #pyramid {
+            line-height: 0;
+            font-size: 30px;
+        }
+
+        body {
+            font-family: "Courier New", monospace;
+            text-align: center;
+            margin-left: 175px;
+            margin-right: 175px;
+            border: 50px;
+            background-color: cornsilk;
+            
+        }
+        h1{
+            font-style: normal;
+            font-weight:bold;
+            background-color: rgb(151, 151, 243);
+            
+        }
+        div.solid {
+            border-style: solid;
+            border-radius: 5px;
+            
+            background-color: aquamarine;
+            }
+        div.brick{
+            font-style: italic;
+        }
+        
+
+        .invalid-field {
+            border: 1px solid red;
+        }
+
+        .error-message {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h1>Pyramid Slide</h1> 
+    </div>
+    <div class = solid>
+        <br>
+        <form id="draw-form">
+            <label>
+                <div class="brick">
+                    <table>
+                        <td>
+                            <tr>
+                                Brick Symbol:
+                                <select id = "myChar">
+                                        <option value="#">#</option>
+                                        <option value="@">@</option>
+                                        <option value="X">X</option>
+                                        <option value="$">$</option>
+                                </select>
+                            </tr>
+                            <tr>
+                                <input type="range" value="10" name="points" min="0" max="20" id="myRange"
+                                step="1" oninput="outputUpdate(value)">
+                                <output for="myRange" id="Height">10</output>
+                            </tr>
+                        </td>
+                    </table>
+                </div>
+            </label>
+            <br><br>
+            <!-- <input type="submit" value="Draw a pyramid"/> -->
+            
+        </form>
+        <br><br>
+
+        <div id="pyramid"></div>
+    </div>
+    <script src="pyramid-slide.js"></script>
+</body>
+</html>
